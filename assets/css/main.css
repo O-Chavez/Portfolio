@@ -3234,9 +3234,17 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #212931;
+			/* background-color: #212931; */
+			/* background: linear-gradient(0.25turn,  #212931  #3f6d9c  #212931); */
+
+			background: linear-gradient(0.25turn, #212931, #1a283f, #212931);
+
 			/* background-image: url("../../images/IMG_0834.JPG"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/IMG_0834.JPG"); */
-			background-image: url("../../images/bg.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+
+			/* background-position-y: 5px; */
+
+			/* background-image: url("../../images/bg.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg"); */
+			
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: no-repeat,								no-repeat,													no-repeat;
