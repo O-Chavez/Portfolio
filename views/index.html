@@ -60,22 +60,47 @@
 								</header>
 
 								<h2>Featured Project:
-									<a id="projects" href="https://browser-fishing-1.onrender.com/" target="_blank">Browser Fishing</a>
+									<a id="projects" href="https://www.knowviachat.com/" target="_blank">Knowvia Chat</a>
 								</h2>
-                <h4>A real-time multiplayer 3D fishing game that runs right in your browser</h4>
+                <h4>An AI website assistant that answers product questions and turns visitors into qualified leads</h4>
+								<a href="https://www.knowviachat.com/" target="_blank" class="image main">
+									<img src="https://api.knowviachat.com/assets/social-banner.png" alt="Knowvia Chat logo: Real Questions. Human Answers. Organic Leads." />
+								</a>
+								<h2><i class="fas fa-robot"></i> <i class="fab fa-react"></i> <i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fab fa-stripe"></i> <i class="fab fa-aws"></i> <i class="fas fa-database"></i> <i class="fab fa-github"></i></h2>
+								<p>
+                  Knowvia Chat is a subscription SaaS product that gives any website an AI assistant trained on its own docs. Businesses upload their PDFs and Word docs, paste a single script tag, and get an embeddable chat widget that answers visitor questions in real time, guides them to the right plan or feature, and picks up on buying intent. When a visitor shares their contact info, Knowvia captures them as a lead, scores them hot, warm or cold, and emails the owner an AI-written summary of what they're looking for.
+                </p>
+								<p>
+                  I built the whole platform end to end across four repos: a TypeScript Node.js/Express API backed by MongoDB that streams conversations over WebSockets and calls the OpenAI API; a React dashboard with chat analytics, lead management, domain allowlisting, a theme customizer and Stripe subscription billing; a lightweight Vite-built widget that drops into any site; and a shared types package published to npm that keeps all three in sync. The widget can even auto-match a customer's branding by scanning their site with headless Chrome and pulling its colors and fonts.
+                </p>
+								<p>
+                  The API runs on a DigitalOcean droplet under PM2 with continuous deployment through GitHub Actions, with documents stored in AWS S3, Google OAuth sign-in, and transactional emails for verification, billing and new leads.
+                </p>
+                <p>
+                  <b>Technologies Used: </b>
+                  <br>
+                  <b>Front-end</b>: React, TypeScript, Tailwind CSS, Chart.js, Vite
+                  <br>
+                  <b>Back-end</b>: Node.js, Express.js, WebSockets, MongoDB, OpenAI API, Stripe, AWS S3, Puppeteer, Google OAuth
+                  <br>
+                  <b>DevOps</b>: GitHub Actions, PM2, DigitalOcean, npm package publishing
+                </p>
+								<ul class="actions special">
+									<li><a href="https://www.knowviachat.com/" target="_blank" class="button large primary">Visit knowviachat.com</a></li>
+									<li><a href="https://github.com/O-Chavez/universal_chat_backend" target="_blank" class="button large"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<h2><a href="https://browser-fishing-1.onrender.com/" target="_blank">Browser Fishing</a></h2>
+                  <h6>A real-time multiplayer 3D fishing game that runs right in your browser.</h6>
 								<a href="https://browser-fishing-1.onrender.com/" target="_blank" class="image main">
 									<img src="https://raw.githubusercontent.com/O-Chavez/browser-fishing/main/docs/images/dock.jpg" alt="Two players chatting on the end of the pier at sunset in Browser Fishing" />
 								</a>
-								<h2><i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fas fa-cube"></i> <i class="fas fa-database"></i> <i class="fab fa-css3"></i> <i class="fab fa-html5"></i> <i class="fab fa-github"></i></h2>
-								<p>
-                  Grab a rod and head down to the pier. Browser Fishing is a persistent online world where everyone shares one lakeside town: fish side by side with friends, chat in real time, and race up the live leaderboard. Battle each catch in a tension-based reeling minigame, discover 20 species and rare shiny variants across a full day/night cycle, and climb 50 levels from a twig rod to hunting mythic Spirit Fish. Dress up with 25 cosmetics, then bet your best catch at roulette and blackjack in Casino Cove. No download, no sign-up. Just pick a name and cast.
-                </p>
-								<p>
-                  The entire game is written in TypeScript and built in code: every 3D model is assembled from Three.js primitives with no asset files, and all music and sound effects are synthesized at runtime with the Web Audio API. An authoritative Node.js WebSocket server rolls every cast and validates every sale and bet, sharing the same rule modules as the client so prices and odds always agree, while player progress persists in PostgreSQL. Unit tests and headless-Chrome smoke tests keep it stable.
-                </p>
-								<p>
-                  I built this project to explore and develop a deeper understanding of agentic AI workflows, directing AI coding agents through design, implementation, testing and deployment of a full-scale game, and learning how to plan, review and ship production-quality software alongside them.
-                </p>
+								<h3><i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fas fa-cube"></i> <i class="fas fa-database"></i> <i class="fab fa-css3"></i> <i class="fab fa-html5"></i> <i class="fab fa-github"></i></h3>
+								<p>A persistent online world where everyone shares one lakeside town: fish with friends, chat in real time, battle catches in a tension-based reeling minigame, and climb 50 levels and a live leaderboard. Every 3D model is built from Three.js primitives and all audio is synthesized with the Web Audio API, while an authoritative Node.js WebSocket server validates every cast, sale and bet and saves progress in PostgreSQL. I built it to explore agentic AI workflows, directing AI coding agents through the design, testing and deployment of a full-scale game.</p>
                 <p>
                   <b>Technologies Used: </b>
                   <br>
@@ -86,13 +111,11 @@
                   <b>Testing &amp; Hosting</b>: Vitest, Puppeteer headless smoke tests, Render
                 </p>
 								<ul class="actions special">
-									<li><a href="https://browser-fishing-1.onrender.com/" target="_blank" class="button large primary">Play now in your browser!</a></li>
+									<li><a href="https://browser-fishing-1.onrender.com/" target="_blank" class="button large primary">Play Now</a></li>
 									<li><a href="https://github.com/O-Chavez/browser-fishing" target="_blank" class="button large"><i class="fab fa-github"></i></a></li>
 								</ul>
-							</article>
+								</article>
 
-						<!-- Posts -->
-							<section class="posts">
 								<article>
 									<h2><a href="https://github.com/O-Chavez/EthanCowskyWebsite" target="_blank">Ethan Cowsky 3D Rendering</a></h2>
                   <h6>Artwork portfolio and e-commerce website.</h6>
