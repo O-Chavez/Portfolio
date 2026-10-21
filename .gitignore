@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw screenshots/video (may contain private data) — processed copies live in src/assets or public/media
+/media-source/

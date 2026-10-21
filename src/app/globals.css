@@ -47,6 +47,21 @@ body {
   }
 }
 
+/* Project tiles carry each product's own brand color, sampled from the live sites */
+.tile-knowvia {
+  background-color: #101424;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 100% 0%, rgb(140 80 232 / 0.3), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 0% 0%, rgb(35 57 154 / 0.35), transparent 70%);
+  border-color: #262c4d;
+}
+
+.tile-rokketmed {
+  background-color: #13223e;
+  background-image: radial-gradient(ellipse 60% 70% at 0% 100%, rgb(244 101 36 / 0.16), transparent 70%);
+  border-color: #233a65;
+}
+
 /* Hero entrance */
 @keyframes rise {
   from {

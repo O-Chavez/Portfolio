@@ -21,12 +21,13 @@ npm run build && npm start
 
 ## Media still needed
 
-Placeholders render until these exist (put files in `public/media/`):
+Screenshots live in `src/assets/projects/` (optimized by `next/image`); video in `public/media/`. Raw captures go in `media-source/` (gitignored, never deployed) — redact personal data before copying anything out of it.
 
 | Asset | Spec | Where it's wired |
 | --- | --- | --- |
-| Knowvia dashboard | ~1880px wide PNG/WebP, cropped to run off the bottom | `FeaturedWork.tsx` → KnowviaTile |
-| RokketMed screenshot | ~1440px wide, captured from the public site | `FeaturedWork.tsx` → RokketMedTile |
+| Knowvia dashboard | ✅ `src/assets/projects/knowvia-leads.jpg` (emails pixelated) — homepage tile | `FeaturedWork.tsx` → KnowviaTile |
+| Knowvia extras | ✅ `knowvia-site.jpg`, `knowvia-lead-detail.jpg`, `knowvia-account.jpg` — reserved for the case study | `/work/knowvia` (not yet used) |
+| RokketMed site | ✅ `src/assets/projects/rokketmed-site.jpg` (captured from rokketmed.com, cookie banner dismissed) | `FeaturedWork.tsx` → RokketMedTile |
 | Browser Fishing loop | ✅ Done: `public/media/fishing-game/gameplay-loop.mp4` + `poster.jpg` | `site.ts` → `fishing.video` |
 | More-work thumbnails | 192×192 | `MoreWork.tsx` |
 
