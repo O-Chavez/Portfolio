@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Graphite dark theme — the only theme. Tokens mirror the approved Showcase v2 mockup. */
+@theme {
+  --color-bg: #1a1b1e;
+  --color-tile: #232428;
+  --color-inset: #141518;
+  --color-line: #2c2d32;
+  --color-line-inset: #33343a;
+  --color-rule: #3a3b41;
+  --color-ink: #f5f5f7;
+  --color-ink-2: #c7c7cc;
+  --color-ink-3: #a1a1a6;
+  --color-ink-4: #8e8e94;
+  --color-accent: #3d8bff;
+  --color-accent-hover: #7ab0ff;
+  --color-button: #2563eb;
+  --color-button-hover: #1d4ed8;
+  --color-online: #34c759;
+  --color-lake: #0f2a3a;
+  --color-lake-line: #1c3a4d;
+  --color-lake-ink: #d6e6ef;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Hero entrance */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Scroll reveal: only hide content when JS can reveal it again and motion is allowed */
+.reveal {
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .reveal:not([data-visible]) {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* Knowvia chat demo: keep the conversation hidden until it plays, when JS and motion allow */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .chat-demo:not([data-played]) > * {
+    visibility: hidden;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-pop {
+  animation: pop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+@keyframes blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+.typing-dot {
+  animation: blink 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-pop,
+  .typing-dot {
+    animation: none;
+  }
+}
