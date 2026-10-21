@@ -51,7 +51,7 @@
                   <br>
                   <b>Languages</b>: JavaScript, TypeScript, Dart, Haskell, Ruby, Kotlin, SQL, GraphQL, HTML5, CSS3.
                   <br>
-                  <b>Frameworks</b>: ReactJS, VueJS, Flutter, NodeJS, Express.js, Bootstrap and Material UI.
+                  <b>Frameworks</b>: ReactJS, VueJS, Flutter, NodeJS, Express.js, Three.js, WebSockets, Bootstrap and Material UI.
                   <br>
                   <b>Tools</b>: Git, GitHub, Google Cloud Platform, AWS Cloud Computing, CI/CD, Jest, Cypress, Unit Testing, Lambda
                   <br>
@@ -59,25 +59,50 @@
 									<h3>View <a href="https://ocmain.s3.us-west-1.amazonaws.com/potfolio/Oscar+Chavez+Resume.pdf" target="_blank"><u> My Resume</u></a></h3>
 								</header>
 
-								<h2>Featured Project: 
-									<a id="projects" href="https://github.com/O-Chavez/EthanCowskyWebsite" target="_blank">Ethan Cowsky 3D Rendering</a>
+								<h2>Featured Project:
+									<a id="projects" href="https://browser-fishing-1.onrender.com/" target="_blank">Browser Fishing</a>
 								</h2>
-                <h4>Artwork portfolio and e-commerce website</h4>
+                <h4>A real-time multiplayer 3D fishing game that runs right in your browser</h4>
+								<a href="https://browser-fishing-1.onrender.com/" target="_blank" class="image main">
+									<img src="https://raw.githubusercontent.com/O-Chavez/browser-fishing/main/docs/images/dock.jpg" alt="Two players chatting on the end of the pier at sunset in Browser Fishing" />
+								</a>
+								<h2><i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fas fa-cube"></i> <i class="fas fa-database"></i> <i class="fab fa-css3"></i> <i class="fab fa-html5"></i> <i class="fab fa-github"></i></h2>
+								<p>
+                  Grab a rod and head down to the pier. Browser Fishing is a persistent online world where everyone shares one lakeside town: fish side by side with friends, chat in real time, and race up the live leaderboard. Battle each catch in a tension-based reeling minigame, discover 20 species and rare shiny variants across a full day/night cycle, and climb 50 levels from a twig rod to hunting mythic Spirit Fish. Dress up with 25 cosmetics, then bet your best catch at roulette and blackjack in Casino Cove. No download, no sign-up. Just pick a name and cast.
+                </p>
+								<p>
+                  The entire game is written in TypeScript and built in code: every 3D model is assembled from Three.js primitives with no asset files, and all music and sound effects are synthesized at runtime with the Web Audio API. An authoritative Node.js WebSocket server rolls every cast and validates every sale and bet, sharing the same rule modules as the client so prices and odds always agree, while player progress persists in PostgreSQL. Unit tests and headless-Chrome smoke tests keep it stable.
+                </p>
+								<p>
+                  I built this project to explore and develop a deeper understanding of agentic AI workflows, directing AI coding agents through design, implementation, testing and deployment of a full-scale game, and learning how to plan, review and ship production-quality software alongside them.
+                </p>
+                <p>
+                  <b>Technologies Used: </b>
+                  <br>
+                  <b>Front-end</b>: TypeScript, Three.js (WebGL), Vite, Web Audio API
+                  <br>
+                  <b>Back-end</b>: Node.js, WebSockets (ws), PostgreSQL
+                  <br>
+                  <b>Testing &amp; Hosting</b>: Vitest, Puppeteer headless smoke tests, Render
+                </p>
+								<ul class="actions special">
+									<li><a href="https://browser-fishing-1.onrender.com/" target="_blank" class="button large primary">Play now in your browser!</a></li>
+									<li><a href="https://github.com/O-Chavez/browser-fishing" target="_blank" class="button large"><i class="fab fa-github"></i></a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<h2><a href="https://github.com/O-Chavez/EthanCowskyWebsite" target="_blank">Ethan Cowsky 3D Rendering</a></h2>
+                  <h6>Artwork portfolio and e-commerce website.</h6>
 								<a href="https://github.com/O-Chavez/EthanCowskyWebsite" target="_blank" class="image main">
 									<video poster="https://ocmain.s3-us-west-1.amazonaws.com/potfolio/EthanCowskyScreenShot.png" width="100%" height="100%" autoplay muted loop>
-										<source src="https://ocmain.s3-us-west-1.amazonaws.com/potfolio/EthanCowsky+(3).mp4" type="video/mp4"> 
+										<source src="https://ocmain.s3-us-west-1.amazonaws.com/potfolio/EthanCowsky+(3).mp4" type="video/mp4">
 									</video>
 								</a>
-								<h2><i class="fab fa-stripe"></i> <i class="fab fa-aws"></i> <i class="fab fa-react"></i> <i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fab fa-css3"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-github"></i></h2>
-								<p>
-                  Explore and shop an impressive collection of 3D art renders by Ethan Cowsky. In collaboration with the talented 3D rendering and photography artist, I designed and developed a custom portfolio and e-commerce store to showcase and sell high-resolution artwork.
-                </p>
-								<p>
-                  The project employs a cutting-edge tech stack, utilizing React for the frontend design, and Node.js with Express for the backend web server, backed by MongoDB as the database. Stripe integration handles smooth payment processing, while Heroku serves as the web hosting platform. For optimized website performance, I incorporated AWS S3 for asset storage and implemented "Serverless Image Handling" to dynamically rescale and process images on the fly.
-                </p> 
-								<p>
-                  To facilitate seamless content management, I secured an admin portal with bcryptjs, empowering the artist to effortlessly upload and edit their artwork for sale, from anywhere.
-                </p>
+								<h3><i class="fab fa-stripe"></i> <i class="fab fa-aws"></i> <i class="fab fa-react"></i> <i class="fab fa-node"></i> <i class="fab fa-js-square"></i> <i class="fab fa-css3"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-github"></i></h3>
+								<p>Explore and shop an impressive collection of 3D art renders by Ethan Cowsky. In collaboration with the talented 3D rendering and photography artist, I designed and developed a custom portfolio and e-commerce store to showcase and sell high-resolution artwork, with Stripe payments, AWS S3 serverless image handling, and a secure admin portal for managing artwork.</p>
                 <p>
                   <b>Technologies Used: </b>
                   <br>
@@ -87,12 +112,9 @@
                 </p>
 								<ul class="actions special">
 									<li><a href="https://github.com/O-Chavez/EthanCowskyWebsite" target="_blank" class="button large"><i class="fab fa-github"></i></a></li>
-									
 								</ul>
-							</article>
+								</article>
 
-						<!-- Posts -->
-							<section class="posts">
 								<article>
 									<h2><a id="projects" href="https://github.com/O-Chavez/Indecision" target="_blank">The Lift Tracker</a></h2>
                   <h6>Personalized workout logging and visualization app.</h6>
