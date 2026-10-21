@@ -4,7 +4,7 @@ import knowviaLeads from "@/assets/projects/knowvia-leads.jpg";
 import rokketmedSite from "@/assets/projects/rokketmed-site.jpg";
 import { fishing, knowvia, rokketmed } from "@/content/site";
 import { GameplayVideo } from "../GameplayVideo";
-import { KnowviaChatDemo } from "../KnowviaChatDemo";
+import { KnowviaShowcase } from "../KnowviaShowcase";
 import { Reveal } from "../Reveal";
 import { BrowserFrame, ExternalLink, FactList, PlayIcon, buttonStyles } from "../ui";
 
@@ -42,18 +42,19 @@ function KnowviaTile() {
           </ExternalLink>
         </div>
       </div>
-      <div className="mt-[clamp(32px,5vw,56px)] flex items-end justify-center gap-4">
-        <BrowserFrame className="h-[360px] min-w-0 flex-[1_1_560px] rounded-t-2xl border border-b-0 border-white/10 max-sm:hidden">
-          <Image
-            src={knowviaLeads}
-            alt="Knowvia dashboard: lead totals and a table of leads scored by temperature"
-            fill
-            sizes="(min-width: 1240px) 760px, 60vw"
-            className="object-cover object-top-left"
-          />
-        </BrowserFrame>
-        <KnowviaChatDemo />
-      </div>
+      <KnowviaShowcase
+        dashboard={
+          <BrowserFrame className="h-[360px] min-w-0 flex-[1_1_560px] rounded-t-2xl border border-b-0 border-white/10 max-sm:hidden">
+            <Image
+              src={knowviaLeads}
+              alt="Knowvia dashboard: lead totals and a table of leads scored by temperature"
+              fill
+              sizes="(min-width: 1240px) 760px, 60vw"
+              className="object-cover object-top-left"
+            />
+          </BrowserFrame>
+        }
+      />
     </Reveal>
   );
 }

@@ -94,7 +94,7 @@ body {
 
 /* Knowvia chat demo: keep the conversation hidden until it plays, when JS and motion allow */
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-  .chat-demo:not([data-played]) > * {
+  .chat-demo:not([data-played]) .demo-step {
     visibility: hidden;
   }
 }
