@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 import { ExternalLink } from "./ui";
 
 const navLink =
-  "rounded-sm text-ink-2 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent";
+  "rounded-sm py-2 text-ink-2 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +30,7 @@ export function Nav() {
         aria-label="Primary"
         className="mx-auto flex h-14 max-w-[1120px] items-center justify-between gap-4 px-5"
       >
-        <Link href="/" className="flex items-center gap-2.5 rounded-sm text-ink">
+        <Link href="/" className="flex items-center gap-2.5 rounded-sm text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
           <span
             aria-hidden="true"
             className="grid size-7 place-items-center rounded-lg bg-ink text-xs font-bold tracking-[0.02em] text-[#111113]"

@@ -36,7 +36,7 @@ function KnowviaTile() {
           </Link>
           <ExternalLink
             href={knowvia.siteUrl}
-            className="rounded-sm px-1 py-1.5 text-sm text-kv-link hover:text-white hover:underline"
+            className="rounded-sm px-1 py-1.5 text-sm text-kv-link hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             knowviachat.com ↗
           </ExternalLink>
@@ -128,7 +128,7 @@ function FishingTile() {
           </ExternalLink>
           <Link
             href={fishing.caseStudyHref}
-            className="rounded-sm px-1 py-1.5 text-sm text-lake-link hover:text-white hover:underline"
+            className="rounded-sm px-1 py-1.5 text-sm text-lake-link hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             See how it&apos;s built →
           </Link>

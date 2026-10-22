@@ -95,9 +95,9 @@ export function KnowviaShowcase({ dashboard }: { dashboard: ReactNode }) {
           aria-label="Example Knowvia conversation"
         >
           {step >= 1 && (
-            <p className={incoming}>Hi! I&apos;m trained on this site&apos;s docs. What can I help you find?</p>
+            <p className={incoming}>Hi! I answer from this site&apos;s docs. What can I help you find?</p>
           )}
-          {step >= 2 && <p className={outgoing}>Which plan fits a team of five?</p>}
+          {step >= 2 && <p className={outgoing}>Which plan fits a growing SaaS team?</p>}
           {step === 3 && (
             <div
               className="demo-step flex gap-1 self-start rounded-[14px_14px_14px_4px] bg-[#334155] px-3.5 py-[11px]"
@@ -113,7 +113,7 @@ export function KnowviaShowcase({ dashboard }: { dashboard: ReactNode }) {
             </div>
           )}
           {step >= 4 && (
-            <p className={incoming}>The Team plan is the best fit. Want me to send you the details?</p>
+            <p className={incoming}>Growth is built for that. Want me to send you the details?</p>
           )}
           {step >= 5 && <p className={outgoing}>Yes please! sam@example.com</p>}
         </div>
@@ -141,7 +141,7 @@ function LeadToast() {
         </span>
       </div>
       <p className="mt-1.5 text-xs leading-normal text-[#cbd5e1]">
-        Sam is comparing plans for a team of five and asked for Team plan details.
+        Sam runs a growing SaaS team and asked for Growth plan details.
       </p>
       <p className="mt-2 font-mono text-[11px] text-[#94a3b8]">AI summary emailed to you</p>
     </div>

@@ -11,7 +11,8 @@ export const buttonStyles = {
   ghost: `${buttonBase} border border-[#48484e] text-ink hover:border-ink-4 hover:text-white`,
 };
 
-export const linkStyles = `text-accent hover:text-accent-hover hover:underline ${focusRing} rounded-sm`;
+// Standalone links only: the vertical padding keeps tap targets at least 24px tall on phones.
+export const linkStyles = `inline-block py-1 text-accent hover:text-accent-hover hover:underline ${focusRing} rounded-sm`;
 
 /** Opens off-site links in a new tab without leaking the opener. */
 export function ExternalLink(props: ComponentProps<"a">) {
