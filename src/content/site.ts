@@ -48,10 +48,11 @@ export const rokketmed = {
 };
 
 export const fishing = {
-  facts: ["Solo build", "Authoritative real-time server", "0 asset files"],
+  facts: ["Solo build", "Authoritative real-time server", "No 3D or audio files"],
   title: "Browser Fishing",
   summary:
     "A persistent multiplayer 3D world in the browser. One shared lake, live chat and a 50-level climb.",
+  caseStudyHref: "/work/browser-fishing",
   playUrl: "https://browser-fishing-1.onrender.com/",
   sourceUrl: "https://github.com/O-Chavez/browser-fishing",
   // 10s trailer, re-encoded for web (muted H.264, faststart). Leave a field empty to skip that source.
@@ -123,7 +124,8 @@ export const experience: Role[] = [
 export type WorkCard = {
   title: string;
   blurb: string;
-  thumbLabel: string;
+  /** Icon tile shown until real thumbnails exist; see MoreWork.tsx. */
+  icon: "cube" | "pin" | "chart";
   href?: string;
 };
 
@@ -131,18 +133,18 @@ export const moreWork: WorkCard[] = [
   {
     title: "Ethan Cowsky 3D",
     blurb: "Art storefront · Stripe · admin portal",
-    thumbLabel: "render",
+    icon: "cube",
     href: "https://github.com/O-Chavez/EthanCowskyWebsite",
   },
   {
     title: "LocalFaves",
     blurb: "Flutter app · shared lists of favorite places",
-    thumbLabel: "app",
+    icon: "pin",
   },
   {
     title: "The Lift Tracker",
     blurb: "React · OAuth · progress charts",
-    thumbLabel: "chart",
+    icon: "chart",
     href: "https://github.com/O-Chavez/lift-tracker",
   },
 ];

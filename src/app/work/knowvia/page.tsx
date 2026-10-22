@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { ComponentProps } from "react";
 import knowviaAccount from "@/assets/projects/knowvia-account.jpg";
 import knowviaCustomize from "@/assets/projects/knowvia-customize.jpg";
 import knowviaDomains from "@/assets/projects/knowvia-domains.jpg";
 import knowviaLeadDetail from "@/assets/projects/knowvia-lead-detail.jpg";
 import knowviaLeads from "@/assets/projects/knowvia-leads.jpg";
 import knowviaSite from "@/assets/projects/knowvia-site.jpg";
+import {
+  CaseSection,
+  NextUp,
+  Screenshot,
+  caseCard,
+  caseEyebrow,
+  caseLede,
+  caseShell,
+} from "@/components/CaseStudy";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { BrowserFrame, ExternalLink, FactList, buttonStyles, linkStyles } from "@/components/ui";
@@ -21,70 +30,20 @@ import {
   product,
   steps,
 } from "@/content/knowvia-case-study";
-import { fishing, knowvia, site } from "@/content/site";
+import { fishing, knowvia } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Knowvia Chat case study",
   description: knowvia.summary,
 };
 
-const shell = "mx-auto max-w-[1120px] px-5";
-const sectionHeading =
-  "mt-3 max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.1] font-bold tracking-[-0.03em]";
-const lede = "mt-4 max-w-[760px] text-lg leading-[1.65] text-ink-2";
-const card = "rounded-[20px] border border-line bg-tile";
-const eyebrow = "font-mono text-xs text-ink-4";
+const shell = caseShell;
+const lede = caseLede;
+const card = caseCard;
+const eyebrow = caseEyebrow;
 
-function Section({
-  id,
-  number,
-  label,
-  title,
-  children,
-}: {
-  id: string;
-  number: string;
-  label: string;
-  title: string;
-  children: ReactNode;
-}) {
-  return (
-    <section aria-labelledby={id} className="pt-[clamp(72px,9vw,112px)]">
-      <p className="font-mono text-[13px] text-kv-eyebrow">
-        {number} · {label}
-      </p>
-      <h2 id={id} className={sectionHeading}>
-        {title}
-      </h2>
-      {children}
-    </section>
-  );
-}
-
-function Screenshot({
-  src,
-  alt,
-  caption,
-  className = "",
-}: {
-  src: StaticImageData;
-  alt: string;
-  caption?: string;
-  className?: string;
-}) {
-  return (
-    <figure className={className}>
-      <div className="overflow-hidden rounded-2xl border border-line bg-inset">
-        <Image
-          src={src}
-          alt={alt}
-          sizes="(min-width: 1120px) 1080px, 100vw"
-          className="h-auto w-full"
-        />
-      </div>
-      {caption && <figcaption className="mt-3 text-sm text-ink-4">{caption}</figcaption>}
-    </figure>
-  );
+function Section(props: Omit<ComponentProps<typeof CaseSection>, "accent">) {
+  return <CaseSection accent="text-kv-eyebrow" {...props} />;
 }
 
 function Hero() {
@@ -401,29 +360,16 @@ function LookingBack() {
   );
 }
 
-function NextUp() {
+function NextProject() {
   return (
-    <section aria-label="What's next" className="py-[clamp(80px,10vw,128px)]">
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-3">
-        <Link
-          href="/#fishing"
-          className="block rounded-3xl border border-lake-line bg-lake p-8 text-ink transition-colors hover:border-[#2c5670] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          <p className="font-mono text-xs text-[#9fc0d4]">NEXT PROJECT</p>
-          <p className="mt-2.5 text-[28px] font-bold tracking-[-0.03em]">{fishing.title} →</p>
-          <p className="mt-1.5 text-[15px] text-lake-ink">Real-time multiplayer 3D in the browser.</p>
-        </Link>
-        <div className="rounded-3xl border border-line bg-tile p-8">
-          <p className="text-[28px] font-bold tracking-[-0.03em]">Building something like this?</p>
-          <p className="mt-1.5 text-[15px] text-ink-3">
-            I’m open to senior roles and select freelance projects.
-          </p>
-          <a href={`mailto:${site.email}`} className={`${buttonStyles.primary} mt-[18px]`}>
-            Email me
-          </a>
-        </div>
-      </div>
-    </section>
+    <Link
+      href={fishing.caseStudyHref}
+      className="block rounded-3xl border border-lake-line bg-lake p-8 text-ink transition-colors hover:border-[#2c5670] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+    >
+      <p className="font-mono text-xs text-lake-label">NEXT PROJECT</p>
+      <p className="mt-2.5 text-[28px] font-bold tracking-[-0.03em]">{fishing.title} →</p>
+      <p className="mt-1.5 text-[15px] text-lake-ink">Real-time multiplayer 3D in the browser.</p>
+    </Link>
   );
 }
 
@@ -440,7 +386,7 @@ export default function KnowviaCaseStudy() {
           <KeyDecisions />
           <Product />
           <LookingBack />
-          <NextUp />
+          <NextUp next={<NextProject />} />
         </div>
       </main>
       <Footer />

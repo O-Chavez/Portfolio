@@ -126,12 +126,12 @@ function FishingTile() {
             <PlayIcon />
             Play now
           </ExternalLink>
-          <ExternalLink
-            href={fishing.sourceUrl}
-            className="rounded-sm px-1 py-1.5 text-sm text-[#9cc8ff] hover:text-white hover:underline"
+          <Link
+            href={fishing.caseStudyHref}
+            className="rounded-sm px-1 py-1.5 text-sm text-lake-link hover:text-white hover:underline"
           >
-            How it&apos;s built ↗
-          </ExternalLink>
+            See how it&apos;s built →
+          </Link>
         </div>
       </div>
     </Reveal>
