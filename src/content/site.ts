@@ -36,7 +36,6 @@ export const knowvia = {
     "An AI assistant trained on a company's own docs. It answers visitors in real time and turns buying intent into scored leads.",
   caseStudyHref: "/work/knowvia",
   siteUrl: "https://www.knowviachat.com/",
-  sourceUrl: "https://github.com/O-Chavez/universal_chat_backend",
   stack: {
     "Front end": ["React", "TypeScript", "Tailwind CSS", "Chart.js", "Vite"],
     "Back end": [

@@ -32,9 +32,6 @@ export default function KnowviaCaseStudy() {
           <ExternalLink href={knowvia.siteUrl} className={buttonStyles.light}>
             Visit knowviachat.com ↗
           </ExternalLink>
-          <ExternalLink href={knowvia.sourceUrl} className={buttonStyles.ghost}>
-            API source ↗
-          </ExternalLink>
         </div>
 
         <section aria-labelledby="stack-title" className="mt-20">
