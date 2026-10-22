@@ -20,6 +20,17 @@
   --color-lake: #0f2a3a;
   --color-lake-line: #1c3a4d;
   --color-lake-ink: #d6e6ef;
+  /* Knowvia case study, sampled from knowviachat.com */
+  --color-kv-ink: #d4d8f0;
+  --color-kv-label: #a5acd6;
+  --color-kv-eyebrow: #8c9cff;
+  --color-kv-link: #93b4ff;
+  --color-kv-rule: #2a3058;
+  --color-kv-line: #3a4275;
+  --color-kv-node: #161b33;
+  --color-kv-purple: #8c50e8;
+  --color-kv-purple-bg: #1d1636;
+  --color-kv-purple-ink: #c4b5fd;
 }
 
 @theme inline {

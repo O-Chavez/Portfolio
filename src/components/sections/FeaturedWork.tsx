@@ -26,17 +26,17 @@ function KnowviaTile() {
           <h2 id="knowvia-title" className={`mt-[18px] text-[clamp(38px,5.4vw,64px)] ${tileTitle}`}>
             {knowvia.title}
           </h2>
-          <p className="mt-3 max-w-[560px] text-[clamp(17px,2vw,21px)] leading-[1.45] text-[#d4d8f0]">
+          <p className="mt-3 max-w-[560px] text-[clamp(17px,2vw,21px)] leading-[1.45] text-kv-ink">
             {knowvia.summary}
           </p>
         </div>
         <div className="flex flex-col items-start gap-1.5">
           <Link href={knowvia.caseStudyHref} className={buttonStyles.light}>
-            Read the case study
+            See how it&apos;s built
           </Link>
           <ExternalLink
             href={knowvia.siteUrl}
-            className="rounded-sm px-1 py-1.5 text-sm text-[#93b4ff] hover:text-white hover:underline"
+            className="rounded-sm px-1 py-1.5 text-sm text-kv-link hover:text-white hover:underline"
           >
             knowviachat.com ↗
           </ExternalLink>

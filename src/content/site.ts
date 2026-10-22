@@ -33,24 +33,9 @@ export const knowvia = {
   facts: ["Founder & sole engineer", "4 repos", "Live in production"],
   title: "Knowvia Chat",
   summary:
-    "An AI assistant trained on a company's own docs. It answers visitors in real time and turns buying intent into scored leads.",
+    "An AI product expert for SaaS teams. It answers website visitors from the product's own docs and turns helpful conversations into scored sales leads.",
   caseStudyHref: "/work/knowvia",
   siteUrl: "https://www.knowviachat.com/",
-  stack: {
-    "Front end": ["React", "TypeScript", "Tailwind CSS", "Chart.js", "Vite"],
-    "Back end": [
-      "Node.js",
-      "Express",
-      "WebSockets",
-      "MongoDB",
-      "OpenAI API",
-      "Stripe",
-      "AWS S3",
-      "Puppeteer",
-      "Google OAuth",
-    ],
-    DevOps: ["GitHub Actions", "PM2", "DigitalOcean", "npm packages"],
-  },
 };
 
 export const rokketmed = {
